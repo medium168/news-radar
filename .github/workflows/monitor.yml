@@ -1,0 +1,15 @@
+# Monitor workflow – runs daily at 13:00 Taiwan Time (UTC+8)
+name: Monitor
+on:
+  schedule:
+    - cron: '0 5 * * *'  # 13:00 Taiwan Time (UTC+8) daily
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.0
+      - name: 執行雷達
+        env:
+          LINE_TOKEN: ${{ secrets.LINE_TOKEN }}
+        run: uv run radar.py
