@@ -1,6 +1,7 @@
 # Monitor workflow – runs daily at 13:00 Taiwan Time (UTC+8)
 name: Monitor
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 5 * * *'  # 13:00 Taiwan Time (UTC+8) daily
 jobs:

@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 KEYWORD = "颱風"
 
 # 一則訊息最多列幾條新聞，減少訊息過多。
-MAX_ITEMS = 5
+MAX_ITEMS = 3
 
 
 # 組網址：把關鍵字接進 Google News 的 RSS 查詢網址（中文要先編碼）。
